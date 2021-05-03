@@ -37,24 +37,24 @@ function Ticket({ data, isSkeleton }) {
           </div>
         </div>
         <div className="ticket__footer">
-          {ticket.segments.map((segment) => (
-            <div className="ticket__info">
+          {ticket.segments.map((segment, i) => (
+            <div className="ticket__info" key={i + i * 3}>
               <span className="info__time info ">
-                <span class="info__text">
+                <span className="info__text">
                   {segment.origin}-{segment.destination}
                 </span>
                 {segment.time}
               </span>
               <span className="info__duration info ">
-                <span class="info__text">В пути</span>
+                <span className="info__text">В пути</span>
                 {segment.duration}
               </span>
               <span className="info__stops info ">
-                <span class="info__text">
+                <span className="info__text">
                   {segment.stops.length} пересад(ки/ка/ок)
                 </span>
-                {segment.stops.map((stop) => (
-                  <span>{stop}</span>
+                {segment.stops.map((stop, i) => (
+                  <span key={i + i * 2}>{stop}</span>
                 ))}
               </span>
             </div>

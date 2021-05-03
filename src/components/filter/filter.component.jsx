@@ -17,8 +17,8 @@ function Filter({ changeFilter }) {
     <div className="filter">
       <span>Количество пересадок</span>
       <ul>
-        {filters.map((filter) => (
-          <li>
+        {filters.map((filter, i) => (
+          <li key={i + i * 5}>
             <label>
               <input
                 type="checkbox"

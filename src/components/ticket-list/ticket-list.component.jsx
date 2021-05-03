@@ -50,7 +50,7 @@ class TicketList extends Component {
                   );
               }
             })
-            .map((ticket) => <Ticket data={ticket} />)
+            .map((ticket, i) => <Ticket data={ticket} key={i + i * 3} />)
             .slice(0, 5)
         ) : (
           <Ticket isSkeleton={true} />

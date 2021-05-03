@@ -17,7 +17,7 @@ export function* fetchTicketsAsync(action) {
       .then((response) => response.json())
       .then((json) => json.tickets);
 
-    console.log(tickets);
+    console.log("LOL");
     yield put(addTickets(tickets));
   } catch (e) {}
 }
